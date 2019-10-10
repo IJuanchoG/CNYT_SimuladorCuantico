@@ -101,44 +101,44 @@ public class SimuladroCuanticoTest {
             fail("no deberia fallar");
         }    
     }
-    @Test
+    /*@Test
     public void noDeberiaHacerDobleRendijaQ() {
-        try {
-            rendijaQ = new DobleRendijaCuantica(0,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
-            double[] click = rendijaQ.click(4);
-            DobleRendijaClasica.printearEstado(click);
-            fail("deberia fallar");
-        } catch (CanicasException ex) {
-            assertTrue(true);
-        }    
+    try {
+    rendijaQ = new DobleRendijaCuantica(0,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
+    double[] click = rendijaQ.click(4);
+    DobleRendijaClasica.printearEstado(click);
+    fail("deberia fallar");
+    } catch (CanicasException ex) {
+    assertTrue(true);
+    }
     }
     @Test
     public void deberiaHacerDobleRendijaQ() {
-        try {
-            rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
-            double[] click = rendijaQ.click(4);
-        } catch (CanicasException ex) {
-            fail("no deberia fallar");
-        }    
+    try {
+    rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
+    double[] click = rendijaQ.click(4);
+    } catch (CanicasException ex) {
+    fail("no deberia fallar");
+    }
     }
     @Test
     public void deberiaHacerDobleRendijaQ2() {
-        try {
-            rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
-            double[] click = rendijaQ.click(4);
-        } catch (CanicasException ex) {
-            fail("no deberia fallar");
-        }    
+    try {
+    rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{4,5,6},{6,7,8},{4},{5},{6},{7},{8}});
+    double[] click = rendijaQ.click(4);
+    } catch (CanicasException ex) {
+    fail("no deberia fallar");
+    }
     }
     @Test
     public void deberiaHacerDobleRendijaQ3() {
-        try {
-            rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{7,8,5,6},{6,7,8},{4},{5},{6},{7},{8}});
-            double[] click = rendijaQ.click(2);
-            DobleRendijaCuantica.printearEstado(click);
-            assertArrayEquals(click,new double[]{0.0,0.0,0.0,0.0,0.2,0.4,0.4,0.4},0.0);
-        } catch (CanicasException ex) {
-            fail("no deberia fallar");
-        }    
+    try {
+    rendijaQ = new DobleRendijaCuantica(2,5,new int[][]{{2,3},{7,8,5,6},{6,7,8},{4},{5},{6},{7},{8}});
+    double[] click = rendijaQ.click(2);
+    DobleRendijaCuantica.printearEstado(click);
+    assertArrayEquals(click,new double[]{0.0,0.0,0.0,0.0,0.2,0.4,0.4,0.4},0.0);
+    } catch (CanicasException ex) {
+    fail("no deberia fallar");
     }
+    }*/
 }

@@ -6,7 +6,6 @@
 package edu.eci.cnyt.simuladorQ;
 
 import edu.eci.cnyt.Exceptions.CanicasException;
-import java.util.Arrays;
 
 /**
  *

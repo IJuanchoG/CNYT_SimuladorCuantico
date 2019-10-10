@@ -31,7 +31,7 @@ public class Complejo {
         return pImg;
     }
     public void printear(){
-        System.out.println("("+getReal()+","+getImg()+"i)");
+        System.out.print("("+getReal()+","+getImg()+"i)");
     }
     /**
      * Verifica que el Hashcode de ambos objetos sean iguales para confirmar equivalencia
