@@ -10,13 +10,14 @@ public class Canicas
     
     public Canicas(int[] estI, int[][] ady) throws CanicasException{
         if (estI.length != ady.length) throw new CanicasException(CanicasException.ESTADO_INCOMPATIBLE);
+        
         estado0= estI;
         matriz = new int[ady.length][ady.length];
         for(int i = 0; i < ady.length; i++) for(int j: ady[i]) matriz[j-1][i] = 1;
         
     }
     
-    public void printearMatriz(int [][] matriz){
+    public static void printearMatriz(int [][] matriz){
         System.out.print("\n  ");
         for (int i = 0; i < matriz.length; i++) System.out.print(" "+(i));
         for(int i = 0; i< matriz.length; i++) {
@@ -25,7 +26,7 @@ public class Canicas
             System.out.print("|");
         }
     }
-    public void printearEstado(int[] estado0){
+    public static void printearEstado(int[] estado0){
         System.out.print("\n  ");
         for(int i = 0; i< estado0.length; i++) {
             System.out.print("\n"+(i)+"| ");
@@ -38,7 +39,6 @@ public class Canicas
         for(int i=0; i<n; i++){
             y = multiplicarVector(y);
         }
-        printearEstado(y);
         return y;
     }
     public int[] getEstado(){

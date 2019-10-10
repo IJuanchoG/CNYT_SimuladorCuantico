@@ -6,7 +6,6 @@
 package edu.eci.cnyt.simuladorQ;
 
 import edu.eci.cnyt.Exceptions.CanicasException;
-import edu.eci.cnyt.tdd.src.EspacioComp;
 
 /**
  *
@@ -16,7 +15,7 @@ public class DobleRendijaCuantica {
     private double[][] matriz;
     private double[] estado0;
     private int blancos,rendijas;
-    private EspacioComp complejos;
+    
     public DobleRendijaCuantica(int rendijas, int blancos, int[][] ady) throws CanicasException{
         if ( (rendijas+blancos+1) != ady.length) throw new CanicasException(CanicasException.ESTADO_INCOMPATIBLE); 
         this.rendijas = rendijas;
@@ -28,11 +27,10 @@ public class DobleRendijaCuantica {
             else if(i>0 && i<=rendijas) matriz[j-1][i] = (double)Math.round((1d/3) * 10d) / 10d;
             else matriz[j-1][i] = 1;
         }
-    
         
     }
     
-    public void printearMatriz(double [][] matriz){
+    public static void printearMatriz(double [][] matriz){
         System.out.print("\n ");
         for (int i = 0; i < matriz.length; i++) System.out.print("   "+(i));
         for(int i = 0; i< matriz.length; i++) {
@@ -41,7 +39,7 @@ public class DobleRendijaCuantica {
             System.out.print("|");
         }
     }
-    public void printearEstado(double[] estado0){
+    public static void printearEstado(double[] estado0){
         System.out.print("\n  ");
         for(int i = 0; i< estado0.length; i++) {
             System.out.print("\n"+(i)+"| ");
@@ -54,7 +52,6 @@ public class DobleRendijaCuantica {
         for(int i=0; i<n; i++){
             y = multiplicarVector(y);
         }
-        printearEstado(y);
         return y;
     }
     public double[] getEstado(){
@@ -77,7 +74,6 @@ public class DobleRendijaCuantica {
     private double[] hallarEstadoInicial(){
         double[] aux = new double[rendijas+blancos+1];
         aux[0] = 1;
-        this.printearEstado(aux);
         return aux;
     }
 }

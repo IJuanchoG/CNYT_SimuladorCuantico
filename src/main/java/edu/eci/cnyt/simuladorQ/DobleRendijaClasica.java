@@ -6,6 +6,7 @@
 package edu.eci.cnyt.simuladorQ;
 
 import edu.eci.cnyt.Exceptions.CanicasException;
+import java.util.Arrays;
 
 /**
  *
@@ -30,7 +31,7 @@ public class DobleRendijaClasica {
         
     }
     
-    public void printearMatriz(double [][] matriz){
+    public static void printearMatriz(double [][] matriz){
         System.out.print("\n ");
         for (int i = 0; i < matriz.length; i++) System.out.print("   "+(i));
         for(int i = 0; i< matriz.length; i++) {
@@ -39,7 +40,7 @@ public class DobleRendijaClasica {
             System.out.print("|");
         }
     }
-    public void printearEstado(double[] estado0){
+    public static void printearEstado(double[] estado0){
         System.out.print("\n  ");
         for(int i = 0; i< estado0.length; i++) {
             System.out.print("\n"+(i)+"| ");
@@ -52,7 +53,6 @@ public class DobleRendijaClasica {
         for(int i=0; i<n; i++){
             y = multiplicarVector(y);
         }
-        printearEstado(y);
         return y;
     }
     public double[] getEstado(){
@@ -75,7 +75,6 @@ public class DobleRendijaClasica {
     private double[] hallarEstadoInicial(){
         double[] aux = new double[rendijas+blancos+1];
         aux[0] = 1;
-        this.printearEstado(aux);
         return aux;
     }
 }
